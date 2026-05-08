@@ -1,0 +1,5 @@
+#!/bin/sh
+
+systemctl is-system-running --wait --quiet
+echo '<0>modprobe: disabling automatic module loading' > /dev/kmsg
+sysctl --quiet --write kernel.modprobe=@libexecdir@/no-kmod-autoload/modprobe.sh
