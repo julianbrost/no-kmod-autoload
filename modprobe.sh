@@ -4,4 +4,4 @@
 # SPDX-License-Identifier: MIT
 
 cmd="modprobe$(printf ' %q' "$@")"
-echo "<3>modprobe (no-kmod-autoload): not loading module: $cmd" > /dev/kmsg
+echo "<3>modprobe (no-kmod-autoload): not loading module. to load manually, run: $cmd" > /dev/kmsg
