@@ -1,4 +1,8 @@
+# SPDX-FileCopyrightText: 2026 Julian Brost <julian@0x4a42.net>
+# SPDX-License-Identifier: MIT
+
 # Maintainer: Julian Brost <julian@0x4a42.net>
+
 pkgname=no-kmod-autoload
 pkgver=0.0
 pkgrel=1
