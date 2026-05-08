@@ -1,0 +1,8 @@
+# generated files
+no-kmod-autoload.service
+start.sh
+
+# package build artefacts
+.SRCINFO
+*.log
+*.pkg.tar.zst
