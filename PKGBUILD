@@ -6,19 +6,20 @@
 pkgname=no-kmod-autoload
 pkgver=0.0
 pkgrel=1
-pkgdesc="Disable automatic loading of kernel modules"
+pkgdesc='Disable automatic loading of kernel modules'
 arch=(any)
-url=""
-license=('TODO')
-depends=()
-makedepends=()
+url='https://codeberg.org/jb/no-kmod-autoload'
+license=(MIT)
+depends=(bash)
 source=(
+	LICENSE
 	Makefile
-	no-kmod-autoload.service.in
 	modprobe.sh
+	no-kmod-autoload.service.in
 	start.sh.in
 )
 sha256sums=(
+	SKIP
 	SKIP
 	SKIP
 	SKIP
@@ -35,4 +36,5 @@ build() {
 package() {
 	cd "$srcdir"
 	make "${_make_opts[@]}" DESTDIR="$pkgdir/" install
+	install -Dm644 -t "$pkgdir/usr/share/licenses/$pkgname" LICENSE
 }
