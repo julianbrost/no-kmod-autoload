@@ -4,5 +4,5 @@
 # SPDX-License-Identifier: MIT
 
 systemctl is-system-running --wait --quiet
-echo '<0>modprobe: disabling automatic module loading' > /dev/kmsg
+echo '<0>modprobe (no-kmod-autoload): disabling automatic module loading' > /dev/kmsg
 sysctl --quiet --write kernel.modprobe=@libexecdir@/no-kmod-autoload/modprobe.sh
