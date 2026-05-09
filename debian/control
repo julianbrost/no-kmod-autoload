@@ -6,7 +6,7 @@ Standards-Version: 4.7.0
 Build-Depends: debhelper-compat (= 13)
 
 Package: no-kmod-autoload
-Architecture: any
+Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Disable autoloading of kernel modules
  This package installs a systemd service unit to disable automatic module
