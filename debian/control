@@ -1,0 +1,15 @@
+Source: no-kmod-autoload
+Maintainer: Julian Brost <julian@0x4a42.net>
+Section: misc
+Priority: optional
+Standards-Version: 4.7.0
+Build-Depends: debhelper-compat (= 13)
+
+Package: no-kmod-autoload
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Disable autoloading of kernel modules
+ This package installs a systemd service unit to disable automatic module
+ loading after the system has finished booting up. If a module is loaded, a
+ message instructing the user how they can manually load the moudle is logged
+ to the kernel message log (dmesg) instead.

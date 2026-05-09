@@ -1,0 +1,6 @@
+version = 1
+
+[[annotations]]
+path = ["debian/**"]
+SPDX-FileCopyrightText = "2026 Julian Brost <julian@0x4a42.net>"
+SPDX-License-Identifier = "MIT"

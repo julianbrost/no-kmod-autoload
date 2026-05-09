@@ -1,0 +1,27 @@
+# SPDX-FileCopyrightText: 2026 Julian Brost <julian@0x4a42.net>
+# SPDX-License-Identifier: MIT
+
+name: Debian Package
+on: [push, pull_request]
+
+permissions: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: docker.io/debian:stable
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+
+      - name: Install build tools
+        run: apt-get -yy update && apt-get -yy install build-essential devscripts
+
+      - name: Build package
+        run: debuild -us -uc
+
+      - name: Lint package
+        run: lintian
