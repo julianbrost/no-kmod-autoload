@@ -7,7 +7,7 @@ Description=Disable automatic module loading after boot finished
 [Service]
 # systemd waits for oneshot, use simple so that the unit isn't waiting for itself
 Type=simple
-ExecStart=@libexecdir@/no-kmod-autoload/start.sh
+ExecStart=@libexecdir@/no-kmod-autoload/start.sh @libexecdir@/no-kmod-autoload/modprobe.sh
 
 [Install]
 WantedBy=multi-user.target

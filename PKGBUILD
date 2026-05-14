@@ -16,7 +16,7 @@ source=(
 	Makefile
 	modprobe.sh
 	no-kmod-autoload.service.in
-	start.sh.in
+	start.sh
 )
 sha256sums=(
 	SKIP

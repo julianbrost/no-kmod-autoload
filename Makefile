@@ -6,10 +6,9 @@ exec_prefix = $(prefix)
 libexecdir = $(exec_prefix)/libexec
 systemd_unit_dir = $(prefix)/lib/systemd/system
 
-GENERATED_FILES = no-kmod-autoload.service start.sh
+GENERATED_FILES = no-kmod-autoload.service
 
 .PHONY: all install clean
-.SUFFIXES:
 
 all: $(GENERATED_FILES)
 

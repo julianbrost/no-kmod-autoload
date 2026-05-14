@@ -3,6 +3,11 @@
 # SPDX-FileCopyrightText: 2026 Julian Brost <julian@0x4a42.net>
 # SPDX-License-Identifier: MIT
 
+if [ $# -ne 1 ]; then
+	echo "usage: $0 <path/to/modprobe.sh>" >&2
+	exit 1
+fi
+
 systemctl is-system-running --wait --quiet
 echo '<0>modprobe (no-kmod-autoload): disabling automatic module loading' > /dev/kmsg
-sysctl --quiet --write kernel.modprobe=@libexecdir@/no-kmod-autoload/modprobe.sh
+sysctl --quiet --write kernel.modprobe="$1"
