@@ -1,5 +1,5 @@
-no-kmod-autoload (0.0) UNRELEASED; urgency=medium
+no-kmod-autoload (0.1.0) stable; urgency=medium
 
   * Initial release.
 
- -- Julian Brost <julian@0x4a42.net>  Sat, 09 May 2026 10:27:55 +0200
+ -- Julian Brost <julian@0x4a42.net>  Thu, 14 May 2026 16:08:10 +0200

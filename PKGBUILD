@@ -4,7 +4,7 @@
 # Maintainer: Julian Brost <julian@0x4a42.net>
 
 pkgname=no-kmod-autoload
-pkgver=0.0
+pkgver=0.1.0
 pkgrel=1
 pkgdesc='Disable automatic loading of kernel modules'
 arch=(any)
