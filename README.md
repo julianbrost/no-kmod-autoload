@@ -51,6 +51,8 @@ By default, everything is installed in `/usr/local`. The path can be customized
 by setting make variables, for example `make prefix=/foo install`. See the top
 of the `Makefile` for all paths that can be customized.
 
+When stopping the service, it should restore the old setting, i.e. switch back to automatic module loading (it's saving the state to the `/run/no-kmod-autoload-state` file.
+
 ## Caveats
 
 While most modules needed for hardware support are loaded by the time the

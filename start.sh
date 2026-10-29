@@ -10,4 +10,5 @@ fi
 
 systemctl is-system-running --wait --quiet
 echo '<0>modprobe (no-kmod-autoload): disabling automatic module loading' > /dev/kmsg
+sysctl kernel.modprobe > /run/no-kmod-autoload-state
 sysctl --quiet --write kernel.modprobe="$1"

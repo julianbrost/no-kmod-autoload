@@ -16,7 +16,7 @@ all: $(GENERATED_FILES)
 	sed 's:@libexecdir@:$(libexecdir):g' < $< > $@
 
 install: all
-	install -Dt $(DESTDIR)$(libexecdir)/no-kmod-autoload start.sh modprobe.sh
+	install -Dt $(DESTDIR)$(libexecdir)/no-kmod-autoload start.sh stop.sh modprobe.sh
 	install -Dm644 -t $(DESTDIR)$(systemd_unit_dir) no-kmod-autoload.service
 
 clean:
